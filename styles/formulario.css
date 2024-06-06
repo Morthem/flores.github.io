@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form{
+    width: 300px;
+    margin: auto;
+}
+
+label{
+    display: block;
+    margin-top: 20px;
+}
+button{
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="text"], select, textarea{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px;
+}
