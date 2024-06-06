@@ -96,9 +96,7 @@ nav a:hover {
 
 .contenedor-imagenes {
     display: flex;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f4f4f4;
+    overflow-x:hidden;
 }
 
 .imagen-carrusel {
@@ -117,7 +115,7 @@ nav a:hover {
 .imagen-sponsor img {
     max-width: 100%;
     height: auto;
-    filter: grayscale(80%); /* Escala de grises para hacer resaltar el color de las plantas */
+    filter: grayscale(60%); /* Escala de grises para hacer resaltar el color de las plantas */
 }
 
 /*Ahora los de la pagina de contacto */
@@ -141,4 +139,36 @@ form input, form textarea {
 
 form textarea {
     height: 100px;
+}
+
+/*Articulo de compra*/
+
+#articulo-compra {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+}
+
+.columna-izquierda {
+    padding: 30px;
+    width: 45%;
+    background-color: white;
+    border-radius: 3%;
+}
+
+.columna-derecha {
+    padding: 30px;
+    padding-left: 50px;
+    background-color: #dcdcdc;
+    width: 45%;
+    margin-top: 50px;
+}
+
+#producto img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
 }
