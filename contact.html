@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <script defer type="text/javascript" src="scripts/formulario.js"></script>
     <link rel="stylesheet" href="styles/estilo.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
     <div class="mensaje-principal">
         Queres consultar por algun producto que no esta en nuestro catalogo? Envianos un mensaje y te responderemos a la brevedad
     </div>
-    <form action="/send_message.php">
+    <form id="contactForm" action="/send_message.php" novalidate>
         
         <Label for="name">Nombre:</Label><br>
         <Input 
@@ -28,7 +29,7 @@
             aria-describedby="nameError" 
         />
         <span class="field-error" id="nameError" aria-live="assertive">
-        </span>
+        </span><br/>
         
         <Label for="email">Mail:</Label><br>
         <Input 
@@ -40,8 +41,8 @@
             autocomplete="off"
             class="input"
         />
-        <span class="field-error" id="email-error" aria-live="assertive">
-        </span>
+        <span class="field-error" id="emailError" aria-live="assertive">
+        </span><br/>
         
         <Label for="message">Mensaje</Label><br>
         <textarea 
@@ -52,10 +53,10 @@
             required="true"
             cols="500"
         ></textarea>
-        <span class="field-error" id="message" aria-live="assertive">
-        </span>
+        <span class="field-error" id="messageError" aria-live="assertive">
+        </span><br/>
 
-        <input type="submit" value="Enviar">
+        <input id="contactFormSubmit" type="submit" value="Enviar">
     </form>
 
 
