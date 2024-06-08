@@ -1,6 +1,7 @@
 (function() {
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        console.log(this);
+        // Evitando el envio del formulario
+        event.preventDefault();
 
         let isValid = true;
         // Limpiando mensajes de error
@@ -33,9 +34,15 @@
             isValid = false;
         }
 
-        // Evitando el envio si algun campo es invalido
-        if (!isValid) {
+        mensajes = document.getElementById('mensajes');
+        // Borramos todos los hijos del campo donde mostramos si el mensaje se envio
+        mensajes.innerHTML = '';
+
+        if (isValid) {
             event.preventDefault();
+            var mensaje = document.createElement('div');
+            mensaje.innerHTML = `Mensaje Enviado<br>    Nombre: ${name}<br> Email: ${email}<br> Mensaje: ${message}`;
+            mensajes.appendChild(mensaje);
         }
     });
 })();
